@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-Последовательная версия умножения матрицы на вектор.
-Основана на лекционном материале (стр. 5-6).
-"""
 import numpy as np
 import time
 
@@ -58,7 +54,7 @@ def main():
     b = sequential_mat_vec_mult(A, x)
     elapsed_time = time.time() - start_time
     
-    print(f"Вычисления завершены за {elapsed_time} секунд.")
+    print(f"Execution time: {elapsed_time:.4f} seconds")
     
     f4 = open('Results_sequential.dat', 'w')
     for j in range(M):

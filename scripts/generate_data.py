@@ -21,4 +21,4 @@ def generate_test_data(M, N, seed, output_dir):
         f.write(f"{N}\n{M}\n")
 
 if __name__ == "__main__":
-    generate_test_data(5, 3, 42, "data")
+    generate_test_data(7, 5, 42, "data")

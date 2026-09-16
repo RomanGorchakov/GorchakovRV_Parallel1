@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-Параллельная версия умножения матрицы на вектор с использованием Scatterv/Gatherv.
-Основана на лекционном материале (стр. 13-17).
-"""
 from mpi4py import MPI
 import numpy as np
 import time
@@ -118,8 +114,8 @@ def main():
     
     # Запись результата
     if rank == 0:
-        relapsed_time = time.time() - start_time
-        print(f"Вычисления завершены за {relapsed_time} секунд.")
+        elapsed_time = time.time() - start_time
+        print(f"Execution time: {elapsed_time:.4f} seconds")
 
         f4 = open('Results_parallel_scatterv.dat', 'w')
         for j in range(M):
